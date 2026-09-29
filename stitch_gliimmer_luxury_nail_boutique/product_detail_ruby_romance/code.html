@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GLIIMMER - Ruby Romance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#600017",
+                        "tertiary": "#735c00",
+                        "secondary-fixed": "#ffdada",
+                        "inverse-surface": "#2f312f",
+                        "on-tertiary-container": "#4f3e00",
+                        "inverse-primary": "#ffb2b9",
+                        "on-tertiary-fixed": "#241a00",
+                        "surface-bright": "#faf9f6",
+                        "background": "#faf9f6",
+                        "primary-fixed": "#ffdadc",
+                        "primary-fixed-dim": "#ffb2b9",
+                        "inverse-on-surface": "#f2f1ee",
+                        "surface-container-high": "#e9e8e5",
+                        "on-primary-fixed": "#400010",
+                        "on-secondary-fixed": "#40000c",
+                        "outline": "#877273",
+                        "secondary": "#b4243d",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#7c2a38",
+                        "tertiary-fixed": "#ffe088",
+                        "on-surface": "#1a1c1a",
+                        "on-secondary-fixed-variant": "#920128",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#fc5b6d",
+                        "surface-container-low": "#f4f3f1",
+                        "primary-container": "#5a1020",
+                        "on-secondary": "#ffffff",
+                        "primary": "#3b000e",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "on-background": "#1a1c1a",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dbdad7",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-primary-container": "#dd7683",
+                        "on-surface-variant": "#544244",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "tertiary-container": "#cca830",
+                        "surface-variant": "#e3e2e0",
+                        "surface": "#faf9f6",
+                        "surface-container-highest": "#e3e2e0",
+                        "surface-tint": "#9a414e",
+                        "surface-container": "#efeeeb",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#ffb3b6",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#dac0c2"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "label-sm": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glossy-sweep::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-20deg);
+            transition: all 0.6s ease;
+        }
+        .group:hover .glossy-sweep::after {
+            left: 200%;
+        }
+        
+        .swatch-gloss {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%, rgba(0,0,0,0.1) 100%);
+            box-shadow: inset 0 2px 4px rgba(255,255,255,0.5), inset 0 -2px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Hide scrollbar for horizontal scrolling areas */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm shadow-primary/5">
+<div class="flex justify-between items-center px-margin-desktop h-20 max-w-container-max-width mx-auto">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-70 transition-opacity duration-300 active:scale-95 transition-transform flex items-center justify-center w-6 h-6">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-display-lg tracking-tight text-primary dark:text-primary-fixed-dim" style="font-size: 32px; line-height: 40px;">GLIIMMER</h1>
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-70 transition-opacity duration-300 active:scale-95 transition-transform flex items-center justify-center w-6 h-6">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-20">
+<!-- Hero Image -->
+<section class="relative w-full h-[574px] bg-surface-container-low flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-surface/40 z-10"></div>
+<img class="absolute inset-0 w-full h-full object-cover object-center z-0" data-alt="A hyper-realistic, glossy 3D render of a luxurious nail polish bottle filled with deep, vibrant ruby red lacquer. The bottle is elegant and minimalist with a metallic champagne gold cap, standing tall in the center. Soft, high-key studio lighting creates beautiful specular highlights and reflections on the glass surface against a pristine warm ivory background. Minimalist-glamour editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArfAyaiBuzWSuwfnEZ_bGuuULwAzJBjRb85iMT7Msa8KMnmLu-dFW-kHS1vNxdfeJgcpVRFQtnYmfvaXczpGA9EBa5EwAHZx8XG1uyVf6azIXZWqEsLS3127pAsSjRGWKerf_kw01gEAwOG4yvoGoYEXkhgcDvdzDdfftpY69e9dCJUyN0RcwCtYgede1i6Peb-VdnCtT0DxtqAjJPo_vL89Up0_tdfroQh-xiKQagqnMvKTekNEE"/>
+</section>
+<!-- Product Details Panel -->
+<section class="relative z-20 bg-surface rounded-t-3xl -mt-8 px-margin-mobile pt-8 pb-12 shadow-[0_-10px_40px_rgba(90,16,32,0.05)]">
+<div class="flex flex-col gap-2 mb-8">
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-[0.15em]">Signature Collection</p>
+<div class="flex justify-between items-end">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">Ruby Romance</h2>
+<span class="font-body-lg text-body-lg text-on-surface">$28.00</span>
+</div>
+</div>
+<!-- Shade Selector -->
+<div class="mb-10">
+<div class="flex justify-between items-center mb-4">
+<p class="font-label-sm text-label-sm text-on-surface uppercase">Select Shade</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Deep Wine</p>
+</div>
+<div class="flex gap-4">
+<!-- Red Swatch -->
+<button class="relative w-12 h-12 rounded-full ring-1 ring-outline-variant ring-offset-2 ring-offset-surface transition-all">
+<div class="absolute inset-0 rounded-full bg-[#E32636]"></div>
+<div class="swatch-gloss"></div>
+</button>
+<!-- Wine Swatch (Active) -->
+<button class="relative w-12 h-12 rounded-full ring-2 ring-primary ring-offset-2 ring-offset-surface transition-all scale-110">
+<div class="absolute inset-0 rounded-full bg-[#722F37]"></div>
+<div class="swatch-gloss"></div>
+</button>
+<!-- Burgundy Swatch -->
+<button class="relative w-12 h-12 rounded-full ring-1 ring-outline-variant ring-offset-2 ring-offset-surface transition-all">
+<div class="absolute inset-0 rounded-full bg-[#4A0E17]"></div>
+<div class="swatch-gloss"></div>
+</button>
+</div>
+</div>
+<!-- Details Grid -->
+<div class="grid grid-cols-3 gap-unit mb-10 bg-surface-container-lowest border border-outline-variant/30 rounded-xl p-4">
+<div class="flex flex-col items-center justify-center text-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="auto_awesome" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">Finish</span>
+<span class="font-body-md text-body-md text-on-surface text-sm">Glossy</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center gap-2 border-l border-r border-outline-variant/30">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="timer">timer</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">Wear</span>
+<span class="font-body-md text-body-md text-on-surface text-sm">7 Days</span>
+</div>
+<div class="flex flex-col items-center justify-center text-center gap-2">
+<span class="material-symbols-outlined text-tertiary-container" data-icon="water_drop">water_drop</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant text-[10px]">Volume</span>
+<span class="font-body-md text-body-md text-on-surface text-sm">10 ml</span>
+</div>
+</div>
+<!-- Design Preview -->
+<div class="mb-10">
+<h3 class="font-label-sm text-label-sm text-on-surface uppercase mb-4">Bottle Design</h3>
+<div class="w-full h-40 rounded-xl overflow-hidden relative">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A close-up, macro lifestyle shot of a premium custom-engraved nail polish bottle cap. The cap is matte champagne gold with subtle, elegant typography etched into the surface reading 'GLIIMMER'. The background is softly blurred, warm, and inviting, emphasizing the bespoke, high-end nature of the product. The lighting is soft and diffused, highlighting the luxurious texture of the metal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8Ir-xrUTsbQPFL23GtgwLgReeEZL-x0y_efzV0K2cnm6Yx5kQXbGVqiDUhPxjQFRzQgnK7GrBzWy0--KhWEQiuDi6nB4gC_BFrIJTD5XQttHYvRKUIQ-XGuXIyKTRTsK4c1G1ZKSf4H0DGIoronhmlmBAbLD4yZhUMjmHDNZHpltUWfzUdtHIXCTu5sB5ZL_fcWPK2LBwX6W8ZDOqWLFlpxHp7qCSVu0NNt6JWYg_Tnc_EtV-rb0"/>
+</div>
+</div>
+<!-- Personalization -->
+<div class="mb-6">
+<label class="font-label-sm text-label-sm text-on-surface uppercase block mb-2" for="note">Personalization</label>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-tertiary/50 focus:ring-0 focus:border-tertiary font-body-md text-body-md px-0 py-3 text-on-surface placeholder:text-on-surface-variant/50 transition-colors" id="note" placeholder="Add a little note..." type="text"/>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs mt-2 italic">Complimentary engraving on the cap.</p>
+</div>
+</section>
+</main>
+<!-- Footer JSON -->
+<footer class="w-full py-20 bg-surface-container-low dark:bg-surface-container-high pb-32">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max-width mx-auto">
+<div class="col-span-1 mb-8">
+<h2 class="font-display-lg text-headline-lg text-primary dark:text-primary-fixed-dim mb-4" style="font-size: 24px; line-height: 32px;">GLIIMMER</h2>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-col md:flex-row gap-6 md:justify-end">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Contact Us</a>
+</div>
+<div class="col-span-1 md:col-span-4 mt-12 pt-8 border-t border-outline-variant/20 text-center md:text-left">
+<p class="font-label-sm text-label-sm text-primary dark:text-on-primary-fixed uppercase">© 2024 GLIIMMER LUXE LACQUER. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</footer>
+<!-- Sticky Bottom Action Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-t border-outline-variant/20 p-margin-mobile pb-8 shadow-[0_-4px_20px_rgba(0,0,0,0.03)]">
+<button class="group relative w-full bg-primary-container text-on-primary-container py-4 px-6 rounded-full font-label-sm text-label-sm tracking-widest uppercase overflow-hidden flex justify-between items-center border border-tertiary/30 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+<span>Add to Bag</span>
+<span class="font-body-md font-semibold text-sm">$28.00</span>
+<div class="glossy-sweep"></div>
+</button>
+</div>
+</body></html>

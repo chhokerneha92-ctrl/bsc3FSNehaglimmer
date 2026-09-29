@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #faf9f6;
+    color: #1a1c1a;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-luxury {
+    font-family: 'Bodoni Moda', serif;
+  }
+}
+
+/* Material Symbols configuration */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Luxury Gloss Effects */
+.gloss-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.gloss-sweep::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+  pointer-events: none;
+}
+
+.gloss-sweep:hover::after {
+  animation: sweep 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes sweep {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+/* Swatch Specular Highlights */
+.glossy-swatch {
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.25), inset 0 -1px 2px rgba(255, 255, 255, 0.15);
+}
+
+.glossy-swatch::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 50%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.swatch-gloss {
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 40%;
+  height: 25%;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 9999px;
+  filter: blur(1px);
+  transform: rotate(-35deg);
+  pointer-events: none;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.glass-panel-dark {
+  background: rgba(59, 0, 14, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(204, 168, 48, 0.3);
+}
+
+/* Inner borders */
+.inner-glow-gold {
+  box-shadow: inset 0 0 0 1px #cca830;
+}
+
+.inner-glow-wine {
+  box-shadow: inset 0 0 0 1px rgba(90, 16, 32, 0.3);
+}
+
+/* Ghost Input Styling */
+.ghost-input input:focus ~ label,
+.ghost-input input:not(:placeholder-shown) ~ label,
+.ghost-input textarea:focus ~ label,
+.ghost-input textarea:not(:placeholder-shown) ~ label {
+  transform: translateY(-1.4rem) scale(0.85);
+  color: #cca830;
+}
+
+/* Custom scrollbars */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wine Night - GLIIMMER</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed-dim": "#e9c349",
+                        "secondary-fixed": "#ffdada",
+                        "secondary-fixed-dim": "#ffb3b6",
+                        "primary-fixed-dim": "#ffb2b9",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#241a00",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e9e8e5",
+                        "surface": "#faf9f6",
+                        "tertiary": "#735c00",
+                        "on-secondary-fixed-variant": "#920128",
+                        "primary-fixed": "#ffdadc",
+                        "tertiary-container": "#cca830",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#600017",
+                        "outline": "#877273",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#40000c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed": "#400010",
+                        "surface-container": "#efeeeb",
+                        "surface-tint": "#9a414e",
+                        "secondary-container": "#fc5b6d",
+                        "surface-bright": "#faf9f6",
+                        "on-primary-container": "#dd7683",
+                        "on-tertiary": "#ffffff",
+                        "background": "#faf9f6",
+                        "inverse-surface": "#2f312f",
+                        "inverse-primary": "#ffb2b9",
+                        "on-tertiary-container": "#4f3e00",
+                        "secondary": "#b4243d",
+                        "surface-container-highest": "#e3e2e0",
+                        "surface-variant": "#e3e2e0",
+                        "primary-container": "#5a1020",
+                        "surface-container-low": "#f4f3f1",
+                        "on-surface-variant": "#544244",
+                        "on-surface": "#1a1c1a",
+                        "surface-dim": "#dbdad7",
+                        "inverse-on-surface": "#f2f1ee",
+                        "primary": "#3b000e",
+                        "tertiary-fixed": "#ffe088",
+                        "error": "#ba1a1a",
+                        "outline-variant": "#dac0c2",
+                        "on-background": "#1a1c1a",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#7c2a38"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "container-max-width": "1280px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Montserrat"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "label-sm": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }],
+                        "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .gloss-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .gloss-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0) 100%);
+            transform: rotate(45deg) translate(-50%, -50%);
+            transition: transform 0.6s ease-in-out;
+            pointer-events: none;
+        }
+        .gloss-effect:hover::after {
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+        .swatch-cream { background: linear-gradient(135deg, #eee 0%, #ddd 100%); }
+        .swatch-shimmer { background: linear-gradient(135deg, #f0e6d2 0%, #d4af37 100%); }
+        .swatch-matte { background: #333; }
+        
+        .bg-gradient-moody {
+            background: linear-gradient(to bottom, #1a1a1a 0%, #5a1020 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased pt-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm shadow-primary/5 transition-transform duration-300" id="topAppBar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-container-max-width mx-auto">
+<button class="text-primary hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined w-6 h-6" data-icon="menu">menu</span>
+</button>
+<h1 class="font-display-lg text-headline-md md:text-display-lg tracking-tight text-primary">GLIIMMER</h1>
+<button class="text-primary hover:opacity-70 transition-opacity duration-300">
+<span class="material-symbols-outlined w-6 h-6" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter lg:gap-24 items-start">
+<!-- Image Gallery (Left) -->
+<div class="space-y-unit flex flex-col items-center">
+<div class="w-full aspect-[4/5] bg-surface-container-lowest overflow-hidden rounded relative">
+<img alt="Product image of Wine Night nail polish" class="w-full h-full object-cover object-center transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB89FSg6LSWTfc0DSMDh4TxSmLsoCNwABi6PNBUljF0oz0JnCXGleJQUvIp0WTmC7Ub1D42691RPMbmJqiLmTC998zlguvD8lGNnz7aA83LsB2vxu4YeX2Ljab65hpp-SHC93wJT8H_S-zjmUPcnFvOn_TQEb_S8Rb9MKPqtlX-pz7GIRMVivtRQvfYvXsqzI52NrTuzQRPkPAC0fuvRJFyX2lSIlCYfWu87NqmsnzhTm9NNXGvrbM"/>
+</div>
+<div class="w-full h-64 md:h-96 bg-surface-container-lowest overflow-hidden rounded relative mt-unit">
+<img alt="Close up texture swatch of Wine Night nail polish on skin" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVH0HoYrNNXuTztQGk8rHO8GqjEyDHElITqXuYvRGoC0vM_oMe4sgZzQ8g4-nKE6lWVQf703nEUXO3PvFg41t5LWQax9vz1KJQeTg9wtg6XXlWA33zyzn-MEs7bSW0KbWEiCvwGAFm5Cn70Pj7BmW1-NitOFmOnpRpkLMmzxroFvJzNADwmgTCUBL_brKgG_I3JOjfRwYEL21y4hrBxTD5MvImbbc6nLYZXrq1r9WMF2r21mmwmm0"/>
+</div>
+</div>
+<!-- Product Details (Right) -->
+<div class="flex flex-col space-y-8 sticky top-32">
+<div>
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-2">Wine Night</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">A deep, moody burgundy with a high-shine finish.</p>
+<p class="font-headline-md text-headline-md text-primary">$28.00</p>
+</div>
+<div class="border-t border-outline-variant/30 py-6">
+<h3 class="font-label-sm text-label-sm text-on-surface uppercase mb-4 tracking-widest">Shade</h3>
+<div class="flex space-x-4">
+<button aria-label="Deep Wine" class="w-10 h-10 rounded-full border-2 border-tertiary-fixed-dim focus:outline-none relative shadow-sm" style="background-color: #5A1020;">
+<span class="absolute inset-0 rounded-full ring-1 ring-inset ring-white/20"></span>
+</button>
+<button aria-label="Ruby Red" class="w-10 h-10 rounded-full border-2 border-transparent hover:border-outline-variant focus:outline-none transition-colors relative shadow-sm" style="background-color: #800020;">
+<span class="absolute inset-0 rounded-full ring-1 ring-inset ring-white/20"></span>
+</button>
+<button aria-label="Black Cherry" class="w-10 h-10 rounded-full border-2 border-transparent hover:border-outline-variant focus:outline-none transition-colors relative shadow-sm" style="background-color: #3B000E;">
+<span class="absolute inset-0 rounded-full ring-1 ring-inset ring-white/20"></span>
+</button>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 py-6">
+<h3 class="font-label-sm text-label-sm text-on-surface uppercase mb-4 tracking-widest">Product Details</h3>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant list-inside list-disc">
+<li>10ml</li>
+<li>7-day wear</li>
+<li>High-gloss finish</li>
+</ul>
+</div>
+<div class="border-t border-outline-variant/30 py-6">
+<h3 class="font-label-sm text-label-sm text-on-surface uppercase mb-4 tracking-widest">Personalization (Optional)</h3>
+<div class="relative">
+<input class="block w-full border-0 border-b border-tertiary-fixed-dim bg-transparent py-2 px-0 text-on-surface focus:ring-0 focus:border-primary font-body-md placeholder:text-on-surface-variant/50 transition-colors" id="engraving" placeholder="Engrave your cap (Max 15 chars)" type="text"/>
+<label class="absolute -top-3 left-0 font-label-sm text-label-sm text-on-surface-variant transition-all" for="engraving">Engraving Message</label>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button (Mobile focused, visible on desktop as a fixed footer panel) -->
+<div class="fixed bottom-0 left-0 w-full p-4 md:p-6 bg-surface/80 backdrop-blur-md border-t border-outline-variant/30 z-40 lg:hidden">
+<button class="w-full bg-primary-container text-on-primary-container font-label-sm text-label-sm py-4 rounded-sm border border-tertiary-fixed-dim uppercase tracking-widest gloss-effect shadow-inner flex justify-center items-center gap-2 transition-transform active:scale-95">
+<span class="material-symbols-outlined w-5 h-5" data-icon="shopping_bag">shopping_bag</span>
+            ADD TO BAG - $28.00
+        </button>
+</div>
+<!-- Desktop Add to Bag (Hidden on mobile) -->
+<div class="hidden lg:flex justify-end max-w-container-max-width mx-auto px-margin-desktop mb-20 mt-10">
+<button class="w-[300px] bg-primary-container text-on-primary-container font-label-sm text-label-sm py-4 rounded-sm border border-tertiary-fixed-dim uppercase tracking-widest gloss-effect shadow-inner flex justify-center items-center gap-2 transition-transform hover:opacity-90 active:scale-95">
+<span class="material-symbols-outlined w-5 h-5" data-icon="shopping_bag">shopping_bag</span>
+            ADD TO BAG - $28.00
+        </button>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full py-20 border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
+<h2 class="font-display-lg text-headline-md md:text-headline-lg text-primary mb-4 tracking-tight">GLIIMMER</h2>
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-widest">© 2024 GLIIMMER LUXE LACQUER.<br/>ALL RIGHTS RESERVED.</p>
+</div>
+<div class="col-span-1 md:col-span-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200 block mb-2" href="#">Privacy Policy</a>
+</div>
+<div>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200 block mb-2" href="#">Terms of Service</a>
+</div>
+<div>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200 block mb-2" href="#">Shipping &amp; Returns</a>
+</div>
+<div>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200 block mb-2" href="#">Contact Us</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for TopAppBar
+        let lastScroll = 0;
+        const appBar = document.getElementById('topAppBar');
+        
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                appBar.style.transform = 'translateY(0)';
+                return;
+            }
+            
+            if (currentScroll > lastScroll && currentScroll > 80) {
+                // Scroll Down
+                appBar.style.transform = 'translateY(-100%)';
+            } else {
+                // Scroll Up
+                appBar.style.transform = 'translateY(0)';
+            }
+            lastScroll = currentScroll;
+        });
+    </script>
+</body></html>

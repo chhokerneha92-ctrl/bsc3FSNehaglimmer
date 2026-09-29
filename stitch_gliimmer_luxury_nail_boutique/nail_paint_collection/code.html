@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GLIIMMER - Nail Paint Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-container": "#600017",
+                      "tertiary": "#735c00",
+                      "secondary-fixed": "#ffdada",
+                      "inverse-surface": "#2f312f",
+                      "on-tertiary-container": "#4f3e00",
+                      "inverse-primary": "#ffb2b9",
+                      "on-tertiary-fixed": "#241a00",
+                      "surface-bright": "#faf9f6",
+                      "background": "#faf9f6",
+                      "primary-fixed": "#ffdadc",
+                      "primary-fixed-dim": "#ffb2b9",
+                      "inverse-on-surface": "#f2f1ee",
+                      "surface-container-high": "#e9e8e5",
+                      "on-primary-fixed": "#400010",
+                      "on-secondary-fixed": "#40000c",
+                      "outline": "#877273",
+                      "secondary": "#b4243d",
+                      "error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#7c2a38",
+                      "tertiary-fixed": "#ffe088",
+                      "on-surface": "#1a1c1a",
+                      "on-secondary-fixed-variant": "#920128",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#fc5b6d",
+                      "surface-container-low": "#f4f3f1",
+                      "primary-container": "#5a1020",
+                      "on-secondary": "#ffffff",
+                      "primary": "#3b000e",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "on-background": "#1a1c1a",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#dbdad7",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "on-primary-container": "#dd7683",
+                      "on-surface-variant": "#544244",
+                      "on-error-container": "#93000a",
+                      "on-primary": "#ffffff",
+                      "tertiary-container": "#cca830",
+                      "surface-variant": "#e3e2e0",
+                      "surface": "#faf9f6",
+                      "surface-container-highest": "#e3e2e0",
+                      "surface-tint": "#9a414e",
+                      "surface-container": "#efeeeb",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#ffb3b6",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#dac0c2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "48px",
+                      "container-max-width": "1280px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ],
+                      "body-md": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "display-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "label-sm": [
+                              "Montserrat"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-lg-mobile": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "72px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0.01em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .gloss-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .gloss-effect::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-20deg);
+            transition: left 0.5s ease-in-out;
+        }
+        .gloss-effect:hover::after {
+            left: 150%;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .btn-primary {
+            background-color: theme('colors.primary');
+            color: theme('colors.on-primary');
+            border: 1px solid theme('colors.tertiary-fixed-dim');
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+        }
+        /* Mobile specific adjustments */
+        @media (max-width: 767px) {
+            .mobile-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col pt-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md border-b border-outline-variant/30 shadow-sm shadow-primary/5 h-20">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-full max-w-container-max-width mx-auto">
+<button class="text-primary hover:opacity-70 transition-opacity duration-300 md:hidden flex items-center justify-center p-2">
+<span class="material-symbols-outlined w-6 h-6" data-icon="menu">menu</span>
+</button>
+<div class="font-display-lg text-headline-lg-mobile md:text-display-lg tracking-tight text-primary flex-1 text-center md:text-left">
+                GLIIMMER
+            </div>
+<button class="text-primary hover:opacity-70 transition-opacity duration-300 flex items-center justify-center p-2 relative">
+<span class="material-symbols-outlined w-6 h-6" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute top-1 right-1 w-2 h-2 bg-secondary rounded-full"></span>
+</button>
+</div>
+</header>
+<main class="flex-grow w-full max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop py-8">
+<div class="mb-12 text-center md:text-left">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">The Collection</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">Discover our curated selection of high-shine and luminous glitters, designed for the modern aesthetic with 7-day enduring wear.</p>
+</div>
+<!-- Collections Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+<!-- Simple / Glossy Section -->
+<section>
+<div class="mb-6 pb-2 border-b border-outline-variant/40 flex justify-between items-end">
+<h2 class="font-headline-md text-headline-md text-primary">Simple / Glossy</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">3 Shades</span>
+</div>
+<div class="grid mobile-grid gap-4 md:gap-gutter">
+<!-- Product Card 1 -->
+<article class="group relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
+<div class="relative w-full pt-[120%] bg-surface-container-low overflow-hidden">
+<img alt="Ruby Romance Nail Polish" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-end, editorial close-up of a sleek, minimalist glass bottle of deep crimson nail polish sitting on a warm ivory marble surface. The lighting is bright and soft, creating glossy, specular highlights on the bottle to emphasize a wet, luxurious finish. The overall aesthetic is clean, feminine, and sophisticated, reflecting a modern light-mode luxury brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0vG90LAcA9dFYfWOGR_dffcRPZeBJ9dsfzOOF6_KgcRA8X9JTp-vaClDJAgH_pUdEy5awGzQ4_xJgkJ46Yl1k_HSe36F65EDvsN2QGgDqcH4tavgD4-neIg82Ncn-kRQQuIyZvzTj3IuO1uedmJwUSn80OmP_RETlvUvChey9qCfmDhrp8WOksUvDoblwY8T0-A7xaLgWtmHC5uotoNIebLp4Pvo6af02tbvSRYlO7h7FnGkbGlY"/>
+<!-- Badges -->
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-surface/90 backdrop-blur-sm px-2 py-1 rounded font-label-sm text-[10px] md:text-label-sm text-primary tracking-wider uppercase">Glossy</span>
+</div>
+<!-- Quick Add Overlay (Desktop) -->
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
+<button class="w-full glass-panel btn-primary gloss-effect py-3 rounded-lg font-label-sm text-label-sm tracking-widest uppercase">Quick Add</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-md text-body-md text-on-surface font-semibold">Ruby Romance</h3>
+<span class="font-body-md text-body-md text-primary font-medium">$24</span>
+</div>
+<p class="font-label-sm text-[10px] md:text-label-sm text-on-surface-variant uppercase mb-4 mt-auto pt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="timelapse">timelapse</span>
+                                7-Day Wear
+                            </p>
+<!-- Mobile Add Button -->
+<button class="w-full btn-primary gloss-effect py-2 rounded-lg font-label-sm text-label-sm tracking-widest uppercase md:hidden mt-auto">Add to Bag</button>
+</div>
+</article>
+<!-- Product Card 2 -->
+<article class="group relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
+<div class="relative w-full pt-[120%] bg-surface-container-low overflow-hidden">
+<img alt="Velvet Crush Nail Polish" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A luxurious product shot of a minimalist nail polish bottle featuring a rich, velvety burgundy shade. The bottle rests on a pristine white ceramic plinth against a soft, creamy background. Lighting is sophisticated and diffused, casting subtle, elegant shadows and highlighting the high-shine, premium quality of the product in a minimalist aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgqeYUOx8euQPGSOHOdBd72Qt2cAKGoJWF3TiwJHWK6zqzDMwcFxPB0hNPPt9I1IjITAaTUwtgFO64DCoJRpt5Ke2RrRRcZjHiPDjM9_ri83qa4QymQLRfRaTkHJzIh42-nMJwKYLC-D-J1Hazv8EusCa4Llp-VurGyKCcqkjDIlBU0qtVoLZgvyROALtqUxD8vRmX-cCAL93I-r9fyfQW_dGjZNFaNmCjuJjFx0_ydBRPLlNlQ4s"/>
+<!-- Badges -->
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-surface/90 backdrop-blur-sm px-2 py-1 rounded font-label-sm text-[10px] md:text-label-sm text-primary tracking-wider uppercase">Glossy</span>
+</div>
+<!-- Quick Add Overlay (Desktop) -->
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
+<button class="w-full glass-panel btn-primary gloss-effect py-3 rounded-lg font-label-sm text-label-sm tracking-widest uppercase">Quick Add</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-md text-body-md text-on-surface font-semibold">Velvet Crush</h3>
+<span class="font-body-md text-body-md text-primary font-medium">$24</span>
+</div>
+<p class="font-label-sm text-[10px] md:text-label-sm text-on-surface-variant uppercase mb-4 mt-auto pt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="timelapse">timelapse</span>
+                                7-Day Wear
+                            </p>
+<!-- Mobile Add Button -->
+<button class="w-full btn-primary gloss-effect py-2 rounded-lg font-label-sm text-label-sm tracking-widest uppercase md:hidden mt-auto">Add to Bag</button>
+</div>
+</article>
+</div>
+</section>
+<!-- Glitter Collection Section -->
+<section>
+<div class="mb-6 pb-2 border-b border-outline-variant/40 flex justify-between items-end">
+<h2 class="font-headline-md text-headline-md text-primary">Glitter Collection</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">2 Shades</span>
+</div>
+<div class="grid mobile-grid gap-4 md:gap-gutter">
+<!-- Product Card 3 -->
+<article class="group relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300">
+<div class="relative w-full pt-[120%] bg-surface-container-low overflow-hidden">
+<img alt="Champagne Pop Nail Polish" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A stunning macro photograph of a clear glass nail polish bottle filled with dense, sparkling champagne-gold glitter. The bottle is positioned on a subtle reflective surface in a bright, light-filled studio environment. The luxurious, feminine aesthetic is emphasized by warm, soft lighting that catches individual glitter particles, creating a dazzling, premium feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCtdhud-lud9-MtPED4axx28p71hNqFOHCyHCENM4g-PXt0NygdV_MEgWP899Bdh0IsEBrEY0oerNoYAETLSIVL-3a6j_JwuPhNK30KgBKra6TLfW5WoEt5Bmann8plCgiG4dySk3nY1x-lhEq8QwyU_VRoTdptDlY07VQ9vEn7sVVum0Gx6lH_KaCnbkXpkPW7vgTIYeRu0mmqewprLY89849pzPv7O0HSDUYfMyVh4NXAM3LFUw"/>
+<!-- Badges -->
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="bg-surface/90 backdrop-blur-sm px-2 py-1 rounded font-label-sm text-[10px] md:text-label-sm text-tertiary-fixed-dim tracking-wider uppercase">Glitter</span>
+</div>
+<!-- Quick Add Overlay (Desktop) -->
+<div class="absolute inset-x-0 bottom-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden md:block">
+<button class="w-full glass-panel btn-primary gloss-effect py-3 rounded-lg font-label-sm text-label-sm tracking-widest uppercase">Quick Add</button>
+</div>
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-md text-body-md text-on-surface font-semibold">Champagne Pop</h3>
+<span class="font-body-md text-body-md text-primary font-medium">$24</span>
+</div>
+<p class="font-label-sm text-[10px] md:text-label-sm text-on-surface-variant uppercase mb-4 mt-auto pt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="timelapse">timelapse</span>
+                                7-Day Wear
+                            </p>
+<!-- Mobile Add Button -->
+<button class="w-full btn-primary gloss-effect py-2 rounded-lg font-label-sm text-label-sm tracking-widest uppercase md:hidden mt-auto">Add to Bag</button>
+</div>
+</article>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low w-full py-20 mt-auto border-t border-outline-variant/20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<div class="col-span-1 md:col-span-1 mb-8 md:mb-0 flex flex-col items-center md:items-start">
+<span class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4">GLIIMMER</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant text-center md:text-left max-w-[200px]">© 2024 GLIIMMER LUXE LACQUER. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="col-span-1 md:col-span-3 flex flex-col md:flex-row justify-center md:justify-end gap-6 md:gap-12 items-center md:items-start text-center md:text-left">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>
