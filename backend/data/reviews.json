@@ -1,0 +1,35 @@
+[
+  {
+    "id": "rev-1",
+    "productId": "ruby-romance",
+    "author": "Elena Rostova",
+    "location": "Paris, FR",
+    "rating": 5,
+    "title": "Couture in a Bottle",
+    "comment": "The gloss on Ruby Romance is peerless. It lasted 8 full days without a single edge chip. Worth every single cent.",
+    "createdAt": "2026-02-14T10:30:00Z",
+    "verified": true
+  },
+  {
+    "id": "rev-2",
+    "productId": "wine-night",
+    "author": "Camille Dupont",
+    "location": "New York, USA",
+    "rating": 5,
+    "title": "Absolute Perfection for Evenings",
+    "comment": "Wine Night is deep, moody, and has an unmistakable wet-lacquer shine. The custom cap engraving adds that bespoke touch.",
+    "createdAt": "2026-03-01T15:20:00Z",
+    "verified": true
+  },
+  {
+    "id": "rev-3",
+    "productId": "garnet-glow",
+    "author": "Sophia Sterling",
+    "location": "London, UK",
+    "rating": 5,
+    "title": "Mesmerizing Shimmer",
+    "comment": "The champagne micro-facets catch the candlelight so subtly. Not chunky glitter—pure elegance.",
+    "createdAt": "2026-03-10T12:00:00Z",
+    "verified": true
+  }
+]

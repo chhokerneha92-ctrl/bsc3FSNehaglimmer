@@ -1,0 +1,30 @@
+[
+  {
+    "id": "red",
+    "name": "Classic Red",
+    "hex": "#c41e3a",
+    "undertone": "Cool Crimson",
+    "finish": "High Gloss"
+  },
+  {
+    "id": "wine",
+    "name": "Deep Wine",
+    "hex": "#5a1020",
+    "undertone": "Warm Burgundy",
+    "finish": "High Gloss"
+  },
+  {
+    "id": "burgundy",
+    "name": "Burgundy",
+    "hex": "#500010",
+    "undertone": "Noir Merlot",
+    "finish": "Velvet Cream"
+  },
+  {
+    "id": "champagne",
+    "name": "Champagne",
+    "hex": "#e6d5b8",
+    "undertone": "Soft Gold Shimmer",
+    "finish": "Micro Luster"
+  }
+]
