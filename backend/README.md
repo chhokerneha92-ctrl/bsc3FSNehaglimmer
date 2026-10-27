@@ -76,3 +76,22 @@ Default server runs at: `http://localhost:5000`
 |---|---|---|
 | `POST` | `/api/contact` | Submit private salon consultation or bridal gifting inquiry |
 | `GET` | `/api/contact` | View inquiries |
+
+---
+
+## ☁️ Deployment on Render (Web Service)
+
+When configuring your Web Service on [Render](https://render.com):
+
+| Setting | Value |
+|---|---|
+| **Language / Environment** | `Node` |
+| **Root Directory** | `backend` |
+| **Build Command** | `npm install` |
+| **Start Command** | `npm start` (or `node src/server.js`) |
+
+### Environment Variables on Render:
+- `NODE_ENV` = `production`
+- `CLIENT_URL` = `https://your-frontend.vercel.app` (your Vercel frontend URL)
+- `PORT` = `5000` (or Render will assign automatically)
+

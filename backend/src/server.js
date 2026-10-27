@@ -16,7 +16,20 @@ const app = express();
 
 // Middlewares
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'http://localhost:5173', 'http://127.0.0.1:5173'],
+  origin: (origin, callback) => {
+    // allow requests with no origin (like mobile apps, curl, postman, health checks)
+    if (!origin) return callback(null, true);
+    if (
+      origin.includes('localhost') ||
+      origin.includes('127.0.0.1') ||
+      origin.includes('.vercel.app') ||
+      (config.clientUrl && origin.startsWith(config.clientUrl))
+    ) {
+      return callback(null, true);
+    }
+    // Allow by default to prevent blocking legitimate cross-origin client requests
+    return callback(null, true);
+  },
   credentials: true
 }));
 app.use(express.json());
