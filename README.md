@@ -10,9 +10,9 @@ GLIIMMER is a full-stack web application for a luxury nail lacquer boutique. It 
 
 ## Tech Stack
 
-- **Frontend:** Node.js tooling (npm), deployed on Vercel **(check: add React/Vite/HTML etc.)**
+- **Frontend:** Node.js tooling (npm), deployed on Vercel **( vercel )**
 - **Backend:** Node.js with Express, deployed on Render
-- **Database:** **(check: add MongoDB/none/etc.)**
+- **Database:** html **
 
 ## Project Structure
 
@@ -38,8 +38,8 @@ cd backend
 npm install
 npm start
 ```
-The server runs on http://localhost:5000 **(check: your port)**.
-If the backend needs environment variables, create a `.env` file in `backend/` **(check: list them, e.g. PORT, DB URL)**.
+The server runs on http://localhost:5000 **.
+If the backend needs environment variables, create a `.env` file in `backend/` 
 
 ### 3. Start the frontend
 Open a new terminal:
@@ -52,8 +52,8 @@ Open the local address shown in the terminal **(check: use `npm start` if that i
 
 ## Features
 
-- Browse the nail lacquer collection **(check: edit to match your site)**
-- Product details and boutique pages
+- Browse the nail glimmer nail paint section **(check: edit to match your site)**
+- customized Product details and boutique pages
 - Frontend connected to the backend API
 
 ## Author
