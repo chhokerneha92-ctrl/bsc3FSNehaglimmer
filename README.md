@@ -8,54 +8,11 @@ GLIIMMER is a full-stack web application for a luxury nail lacquer boutique. It 
 - Backend (API): https://bsc3fsnehaglimmerbackend.onrender.com/
 - GitHub: https://github.com/chhokerneha92-ctrl/bsc3FSNehaglimmer
 
+Note: the backend is hosted on Render's free tier, so the first request may take about a minute to wake up.
+
 ## Tech Stack
 
-- **Frontend:** Node.js tooling (npm), deployed on Vercel **( vercel )**
+- **Frontend:** HTML, CSS and JavaScript, built with Node.js tooling (npm), deployed on Vercel
 - **Backend:** Node.js with Express, deployed on Render
-- **Database:** html **
-
-## Project Structure
-
-```
-Frontend/                              -> frontend code
-backend/                               -> backend (Express) code
-stitch_gliimmer_luxury_nail_boutique/  -> design files
-```
-
-## How to Run Locally
-
-Requirements: Node.js (v18 or later) and npm.
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/chhokerneha92-ctrl/bsc3FSNehaglimmer.git
-cd bsc3FSNehaglimmer
-```
-
-### 2. Start the backend
-```bash
-cd backend
-npm install
-npm start
-```
-The server runs on http://localhost:5000 **.
-If the backend needs environment variables, create a `.env` file in `backend/` 
-
-### 3. Start the frontend
-Open a new terminal:
-```bash
-cd Frontend
-npm install
-npm run dev
-```
-Open the local address shown in the terminal **(check: use `npm start` if that is your script)**.
-
-## Features
-
-- Browse the nail glimmer nail paint section **(check: edit to match your site)**
-- customized Product details and boutique pages
-- Frontend connected to the backend API
-
-## Author
-
-Neha Chhoker, BSc Forensic Science, Geeta University
+- **Database:** None
+- **Development:** Built
